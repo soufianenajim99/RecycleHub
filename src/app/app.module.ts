@@ -12,6 +12,8 @@ import {NgOptimizedImage} from '@angular/common';
 import { IndividualDashboardComponent } from './features/individual/individual-dashboard/individual-dashboard.component';
 import { CollectorDashboardComponent } from './features/collector/collector-dashboard/collector-dashboard.component';
 import { UnauthorizedComponent } from './features/auth/unauthorized/unauthorized.component';
+import { SideMenuComponent } from './shared/side-menu/side-menu.component';
+import { CollecteCardComponent } from './shared/collecte-card/collecte-card.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { UnauthorizedComponent } from './features/auth/unauthorized/unauthorized
     NavbarComponent,
     IndividualDashboardComponent,
     CollectorDashboardComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    SideMenuComponent,
+    CollecteCardComponent
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,20 @@
         RecycleHub
       </a>
       <div class="space-x-4">
-        <button routerLink="/login" class="px-4 py-2 font-semibold border border-purple-600 rounded-lg hover:bg-purple-100">
-          Login
-        </button>
-        <button routerLink="/register" class="px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700">
-          Register
-        </button>
+        <ng-container *ngIf="!isLoggedIn; else loggedInTemplate">
+          <button routerLink="/login" class="px-4 py-2 font-semibold border border-purple-600 rounded-lg hover:bg-purple-100">
+            Login
+          </button>
+          <button routerLink="/register" class="px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700">
+            Register
+          </button>
+        </ng-container>
+
+        <ng-template #loggedInTemplate>
+          <button (click)="logout()" class="px-4 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700">
+            Logout
+          </button>
+        </ng-template>
       </div>
     </div>
   </nav>
