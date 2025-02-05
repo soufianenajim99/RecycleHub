@@ -17,7 +17,7 @@ export class RegisterComponent {
   dateNaissance: string = '';
   telephone: string = '';
   profilePhoto: File | null = null;
-
+  userType: string = 'individual';
   successMessage: string = '';
   errorMessage: string = '';
 
@@ -62,6 +62,7 @@ export class RegisterComponent {
       dateNaissance: this.dateNaissance,
       telephone: this.telephone,
       profilePhoto: this.profilePhoto ? this.profilePhoto.name : null,
+      userType: this.userType,
     };
 
 
@@ -103,5 +104,6 @@ export class RegisterComponent {
     this.dateNaissance = '';
     this.telephone = '';
     this.profilePhoto = null;
+    this.userType = 'individual';
   }
 }

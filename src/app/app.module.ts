@@ -10,6 +10,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import {FormsModule} from '@angular/forms';
 import {NgOptimizedImage} from '@angular/common';
 import { IndividualDashboardComponent } from './features/individual/individual-dashboard/individual-dashboard.component';
+import { CollectorDashboardComponent } from './features/collector/collector-dashboard/collector-dashboard.component';
+import { UnauthorizedComponent } from './features/auth/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { IndividualDashboardComponent } from './features/individual/individual-d
     RegisterComponent,
     HomeComponent,
     NavbarComponent,
-    IndividualDashboardComponent
+    IndividualDashboardComponent,
+    CollectorDashboardComponent,
+    UnauthorizedComponent
   ],
   imports: [
     BrowserModule,
